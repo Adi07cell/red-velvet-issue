@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spotted: R.</title>
+<meta name="description" content="The Red Velvet Issue. No. 22.">
+<meta name="theme-color" content="#120A0C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Spotted: R., officially 22.">
+<meta property="og:description" content="The Red Velvet Issue — No. 22. Sound on.">
+<meta property="og:image" content="https://adi07cell.github.io/red-velvet-issue/og.jpg">
+<meta property="og:url" content="https://adi07cell.github.io/red-velvet-issue/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%239E1B32'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='28' fill='%23FBF6EE'%3EXO%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=DM+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&family=Tiro+Bangla&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=11240007">
+</head>
+<body class="is-locked">
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="flash" id="flash" aria-hidden="true"></div>
+
+<!-- ============================== LOCK SCREEN ============================== -->
+<div class="lock" id="lock">
+  <div class="lock__bokeh" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="lock__top">
+    <p class="lock__date" id="lockDate">Tuesday, 24 November</p>
+    <p class="lock__time" id="lockTime">00:00</p>
+  </div>
+  <div class="lock__stack" id="notifs" role="list" aria-label="Notifications"></div>
+  <button class="lock__unlock" id="unlock" aria-label="Open the issue">
+    <span class="lock__hint">tap a notification · or swipe up</span>
+    <span class="lock__bar"></span>
+  </button>
+</div>
+
+<!-- ============================== THE ISSUE ============================== -->
+<main id="issue" aria-hidden="true">
+
+  <!-- COVER -->
+  <section class="spread cover" id="cover">
+    <header class="cover__head">
+      <p class="cover__kicker mono"><span>The Red Velvet Issue</span><span>No. 22</span><span>24·11·2026</span></p>
+      <h1 class="masthead" id="masthead" aria-label="Rishika">RISHIKA</h1>
+    </header>
+    <div class="cover__art">
+      <div class="cover__22" aria-hidden="true">22</div>
+      <svg class="cover__ribbon" viewBox="0 0 400 520" aria-hidden="true" preserveAspectRatio="none">
+        <defs><linearGradient id="satin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9E1B32"/><stop offset=".45" stop-color="#C2324D"/><stop offset=".55" stop-color="#E0566F"/><stop offset="1" stop-color="#6B0F21"/></linearGradient></defs>
+        <path class="ribbon-path" d="M-20 470 C 80 420, 60 300, 170 290 S 330 340, 360 200 S 300 40, 420 20" fill="none" stroke="url(#satin)" stroke-width="16" stroke-linecap="round"/>
+      </svg>
+      <span class="cover__bow" data-art="bow" aria-hidden="true"></span>
+      <span class="cover__shoes" aria-hidden="true"><span data-art="stiletto"></span><span data-art="sneaker"></span></span>
+    </div>
+    <nav class="coverlines" aria-label="In this issue">
+      <a href="#gala" class="cl cl--l"><b>Heels or sneakers?</b> We finally have an answer <i class="mono">p.4</i></a>
+      <a href="#diner" class="cl cl--r"><b>Can she beat Chennai</b> at the death-by-chocolate stack? <i class="mono">p.6</i></a>
+      <a href="#books" class="cl cl--l"><b>Plot-twist bingo:</b> dark romance, decoded <i class="mono">p.5</i></a>
+      <a href="#bar" class="cl cl--r"><b>The piña colada turns 72.</b> You turn 22. <i class="mono">p.7</i></a>
+      <a href="#joys" class="cl cl--l"><b>22 small joys</b> that cost ₹0 <i class="mono">p.8</i></a>
+      <a href="#cake" class="cl cl--r"><b>Exclusive:</b> a red velvet cake with your name on it <i class="mono">p.9</i></a>
+    </nav>
+    <span class="sticker sticker--price" aria-hidden="true"><b>₹0</b><i>priceless</i></span>
+    <span class="sticker sticker--bn" lang="bn">শুভ জন্মদিন</span>
+    <span class="barcode" aria-hidden="true"><span data-art="barcode"></span><i class="mono">24·11·2026·22</i></span>
+    <a class="scrollcue mono" href="#feed">Turn the page ↓</a>
+  </section>
+
+  <!-- FEED -->
+  <section class="spread feed" id="feed">
+    <header class="sh reveal"><p class="kicker mono">p.2 · The Feed</p><h2>Spotted.</h2><p class="dek">Our sources have been busy. Everything here is true. Mostly.</p><i class="sweep"></i></header>
+    <div class="blasts" id="blasts"></div>
+    <div class="pearls" data-pearls aria-hidden="true"></div>
+  </section>
+
+  <!-- GALA -->
+  <section class="spread gala" id="gala">
+    <header class="sh reveal"><p class="kicker mono">p.4 · Fashion</p><h2>Spotted at the Gala</h2><p class="dek">Dress our cover star. She has opinions. We have a sketchbook.</p><i class="sweep"></i></header>
+    <div class="gala__stage reveal">
+      <div class="gala__sketch" id="galaSketch" aria-live="polite"></div>
+      <div class="gala__controls">
+        <div class="ctl"><p class="ctl__k mono">Silhouette</p><div class="seg" id="galaSil"></div></div>
+        <div class="ctl"><p class="ctl__k mono">Colour</p><div class="swatches" id="galaColor"></div></div>
+        <div class="ctl"><p class="ctl__k mono">Under the hem</p>
+          <div class="shoeslider" id="shoeSlider"><span class="shoeslider__track"></span><span class="shoeslider__pearl" id="shoePearl"></span>
+            <button data-shoe="stilettos">Stilettos</button><button data-shoe="both">Both</button><button data-shoe="sneakers">Sneakers</button></div></div>
+        <label class="toggle"><input type="checkbox" id="galaBand"><span></span> A headband. Obviously.</label>
+      </div>
+    </div>
+    <p class="gala__caption reveal" id="galaCaption"></p>
+    <div class="gala__save reveal"><button class="btn btn--velvet" id="galaSaveBtn">Add to the lookbook</button></div>
+    <div class="lookbook" id="lookbook"></div>
+  </section>
+
+  <!-- BOOKS -->
+  <section class="spread books" id="books">
+    <header class="sh reveal"><p class="kicker mono">p.5 · The Nightstand</p><h2>Plot-Twist Bingo</h2><p class="dek">Tap every trope you’ve survived. Dark romance, Mystic Falls and the Upper East Side all count.</p><i class="sweep"></i></header>
+    <div class="bingo reveal" id="bingo" role="grid" aria-label="Plot-twist bingo card"></div>
+    <p class="bingo__status mono" id="bingoStatus" aria-live="polite">0 lines · two little ducks to win</p>
+  </section>
+
+  <!-- DINER -->
+  <section class="spread diner" id="diner">
+    <header class="sh reveal"><p class="kicker mono">p.6 · Food</p><h2>Death-by-Chocolate Stack</h2><p class="dek">Tap to drop. Stack them straight. Twenty-two gets you a crown.</p><i class="sweep"></i></header>
+    <div class="game reveal" id="stackGame">
+      <canvas id="stackCanvas" aria-label="Pancake stacking game. Tap to drop."></canvas>
+      <div class="game__hud mono"><span>Stack <b id="stackScore">0</b></span><span>Best <b id="stackBest">0</b></span><span>Chennai <b id="stackHis">17</b></span></div>
+      <div class="game__over" id="stackOver" hidden><p class="game__big" id="stackOverTitle"></p><p id="stackOverText"></p><button class="btn btn--velvet" id="stackAgain">Stack again</button></div>
+      <p class="game__tap mono" id="stackTap">tap to start</p>
+    </div>
+  </section>
+
+  <!-- BAR -->
+  <section class="spread bar" id="bar">
+    <header class="sh reveal"><p class="kicker mono">p.7 · The Bar Cart</p><h2>Piña Colada Catch</h2><p class="dek">Drag the glass. Catch the good stuff. Dodge the vervain. Thirty seconds, bartender.</p><i class="sweep"></i></header>
+    <div class="game reveal" id="catchGame">
+      <canvas id="catchCanvas" aria-label="Catch the piña colada ingredients. Drag to move the glass."></canvas>
+      <div class="game__hud mono"><span>Score <b id="catchScore">0</b></span><span>Time <b id="catchTime">30</b></span></div>
+      <div class="game__over" id="catchOver" hidden></div>
+      <p class="game__tap mono" id="catchTap">tap to start</p>
+    </div>
+  </section>
+
+  <!-- RECEIPT -->
+  <section class="spread joys" id="joys">
+    <header class="sh reveal"><p class="kicker mono">p.8 · Shopping</p><h2>22 Things That Cost ₹0</h2><p class="dek">Not a single one of these comes in a box.</p><i class="sweep"></i></header>
+    <div class="printer reveal">
+      <div class="printer__body"><span class="printer__slot"></span><span class="printer__led" id="printLed"></span><p class="mono">THE SMALL JOYS CO.</p></div>
+      <div class="receipt" id="receipt"><div class="receipt__inner" id="receiptInner"></div></div>
+      <button class="btn btn--velvet" id="printBtn">Print my receipt</button>
+    </div>
+  </section>
+
+  <!-- CAKE -->
+  <section class="spread cake" id="cake">
+    <header class="sh sh--light reveal"><p class="kicker mono">p.9 · Exclusive</p><h2>The Red Velvet</h2><p class="dek">Drag your finger down through the cake to cut the first slice.</p><i class="sweep"></i></header>
+    <div class="cakestage reveal" id="cakeStage">
+      <svg id="cakeSvg" viewBox="0 0 320 330" aria-label="A red velvet birthday cake. Swipe down across it to cut a slice."></svg>
+      <p class="cake__hint mono" id="cakeHint">↓ swipe down to cut ↓</p>
+    </div>
+    <div class="cake__after" id="cakeAfter" hidden>
+      <p class="cake__waldorf" id="cakeWaldorf"></p>
+      <div class="tracker" id="tracker"></div>
+    </div>
+  </section>
+
+  <!-- LETTER -->
+  <section class="spread letter" id="letter">
+    <header class="sh reveal"><p class="kicker mono">p.10 · Letter from the Editor</p><h2>Dear R.,</h2><i class="sweep"></i></header>
+    <div class="letter__body reveal" id="letterBody"></div>
+    <p class="letter__sign reveal" id="letterSign"></p>
+    <div class="letter__actions reveal">
+      <a class="btn btn--velvet" id="replyBtn" target="_blank" rel="noopener">Write to the editor</a>
+      <a class="btn btn--ghost" href="#cover">Read the issue again</a>
+    </div>
+    <p class="colophon mono">The Red Velvet Issue · No. 22 · printed with love in Chennai · all prices ₹0</p>
+  </section>
+</main>
+
+<button class="sound mono" id="sound" hidden aria-label="Sound"><span class="eq"><i></i><i></i><i></i></span><span id="soundLabel">Sound on</span></button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="modal" id="modal" hidden>
+  <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__art" id="modalArt"></div>
+    <p class="modal__kicker mono" id="modalKicker"></p>
+    <h3 class="modal__title" id="modalTitle"></h3>
+    <p class="modal__body" id="modalBody"></p>
+    <button class="btn btn--velvet" id="modalClose">Close</button>
+  </div>
+</div>
+
+<script src="content.js?v=11240007"></script>
+<script src="audio.js?v=11240007"></script>
+<script src="tracks.js?v=11240007"></script>
+<script src="art.js?v=11240007"></script>
+<script src="core.js?v=11240007"></script>
+<script src="sections.js?v=11240007"></script>
+<script src="games.js?v=11240007"></script>
+<script src="main.js?v=11240007"></script>
+</body>
+</html>
